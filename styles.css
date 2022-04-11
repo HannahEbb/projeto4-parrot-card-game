@@ -22,7 +22,7 @@ body {
     margin-bottom: 30px;
 } 
 
-.cartas div {
+.cartas > div {
     width: 117px;
     height: 146px;
     margin-bottom: 30px;
