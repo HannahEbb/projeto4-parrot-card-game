@@ -1,0 +1,49 @@
+body {
+    background-color: #EEF9BF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.game-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 56px;
+    font-weight: 700;
+    color: #75B79E;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+} 
+
+.cartas div {
+    width: 117px;
+    height: 146px;
+    margin-bottom: 30px;
+    margin-right: 44px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+}
+
+.cartas img {
+    width: 100px;
+    height: 100px;
+   padding-top: 20px;
+   padding-left: 10px;
+   object-fit: cover;
+}
+
+.escondido {
+    display: none;
+}
+
+.carta-verso img {
+    object-fit: scale-down;
+    padding-top: 30px;
+}
