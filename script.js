@@ -2,45 +2,60 @@
 let numerocartas;
 let numeropares;
 let arraycartas = [];
-let arraytodascartas = [document.querySelector(".carta01"), document.querySelector(".carta02"), document.querySelector(".carta03"), document.querySelector(".carta04"), document.querySelector(".carta05"), document.querySelector(".carta06"), document.querySelector(".carta07"), document.querySelector(".carta08"), document.querySelector(".carta09"), document.querySelector(".carta10"), document.querySelector(".carta11"), document.querySelector(".carta12"), document.querySelector(".carta13"), document.querySelector(".carta14")];
 let cartas;
 
-quantasCartas ()
+
+// ARRAY QUE CONTÉM AS IMAGENS DOS 7 MODELOS DE CARTA
+
+const imgArray = new Array();
+imgArray[0] = new Image();
+imgArray[0].src = "/media/bem-te-vi.jpeg";
+
+imgArray[1] = new Image();
+imgArray[1].src = '/media/bem-te-vi.jpeg';
+
+imgArray[2] = new Image();
+imgArray[2].src = '/media/bem-te-vi.jpeg';
+
+imgArray[3] = new Image();
+imgArray[3].src = '/media/bem-te-vi.jpeg';
+
+imgArray[4] = new Image();
+imgArray[4].src = '/media/bem-te-vi.jpeg';
+
+imgArray[5] = new Image();
+imgArray[5].src = '/media/bem-te-vi.jpeg';
+
+imgArray[6] = new Image();
+imgArray[6].src = '/media/bem-te-vi.jpeg';
 
 // "Esta função pode ficar separada do código acima, onde você preferir"
 function comparador() { 
 	return Math.random() - 0.5; 
 }
 
+
+quantasCartas ()
+
+ 
 // FUNÇÃO PARA EXIBIR AS CARTAS NO DISPLAY DE ACORDO COM PROMPT
 function quantasCartas () {
     numerocartas = prompt("Quantas cartas?");
     numeropares = Math.floor(numerocartas/2);
 
-for (let i = 0; i <= numerocartas-1; i++) {
-arraycartas.push(arraytodascartas[i]); 
+    for (let i = 0; i <= numeropares-1; i++) {
+    arraycartas.push(imgArray[i], imgArray[i]);
+    arraycartas = arraycartas.sort(comparador);
+    }
 
-}
-
-arraycartas = arraycartas.sort(comparador);
+//INSERE CARTAS NO INNERHTML DA DIV "CARTAS"
 cartas = document.querySelector(".cartas");
 
-for (let j = 0; j <= (arraycartas.length -1); j++) {
-  cartas.innerHTML += arraycartas[j]; 
-  arraycartas[j].classList.remove("escondido");
-
- }
+for (let j = 0; j <= numerocartas-1; j++) {
+  cartas.innerHTML += `<div> <img src ="${arraycartas[j]}"> </div>`
 
 }
 
-//EXIBIR O ARRAYCARTAS NA ORDEM EMBARALHADA DO ARRAY -- ver aulas de quarta, quinta e sexta
-
-
-  //for (let j = 0; j <= (arraycartas.length - 1); j++) {
-  //arraycartas[j].classList.remove("escondido");
-  //arraycartas[j].classList.add("carta-verso");
-
-  //return arraytodascartas;
-
+}
 
 
