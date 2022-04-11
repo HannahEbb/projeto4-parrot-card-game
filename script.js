@@ -27,7 +27,7 @@ arraycartas = arraycartas.sort(comparador);
 
 }
 
-//EXIBIR O ARRAYCARTAS NA ORDEM EMBARALHADA DO ARRAY
+//EXIBIR O ARRAYCARTAS NA ORDEM EMBARALHADA DO ARRAY -- ver aulas de quarta, quinta e sexta
 function exibeCartas(arraycartas) {
 
   for (let j = 0; j <= (arraycartas.length - 1); j++) {
